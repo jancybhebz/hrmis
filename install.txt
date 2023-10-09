@@ -1,0 +1,110 @@
+Human Resource Management Information System (HRMIS) 
+http://hrmis.sourceport.dost.gov.ph
+
+PRECONDITIONS FOR INSTALL
+---------------------------------------------
+ 1. You need to have Apache running as a Web Server 
+ 2. Make sure you have PHP (www.php.net) installed.  We recommend version 4.0.2
+    or higher.  HRMIS has been successfully tested to work with 4.0.2. 
+ 3. Make sure you have MySQL (www.mysql.net) version 3.22.x or higher installed. 
+  
+INSTALLATION
+----------------------
+ 1. Decompress the distribution file (hrmis-2.1.0.tar.gz) with the following command:
+ 
+           tar -xzvf hrmis-2.1.0.tar.gz
+           tar -xzvf hrmis_helpimage-2.1.0.tar.gz
+     
+ 2. The following directory structure will be created:
+           hrmis-2.1.0
+           |
+           +-- README (info about the DOST-HRMIS project)
+           |
+           +-- INSTALL (this file)
+           |
+           +-- COPYING (General Public License)
+           |
+           +-- AUTHORS (The DOST-HRMIS Development Group)
+           |
+           +-- hrmis (hrmis 2.0.0 files)
+           |   |
+           |   +-- class
+           |   |
+           |   +-- images
+           |   |
+           |   +-- Templates
+	   |   |
+           |   +-- javascript
+	   |   |
+           |   +-- hrmanual
+           |   |
+	   |   +-- chiefmanual
+           |   |
+           |   +-- cashiermanual
+           |
+           +-- database (SQL dump file)
+               |
+               +-- HRMISDB.sql
+
+ 3.  Copy the files into the HTTP Document Root directory:
+     
+     Assuming that the Apache Document Root is '/var/www/html', issue the 
+     following commands:
+
+             cp -R hrmis-2.1.0/hrmis /var/www/html
+
+ 4.  Copy the image files from hrmis_helpimage-2.1.0 folder to hrmis-2.1.0/hrmis/images
+
+ 5.  Copy the cashiermanual folder from hrmis_cashierhelp-2.1.0 folder to hrmis-2.1.0/hrmis
+
+ 6.  Copy the chiefmanual folder from hrmis_chiefhelp-2.1.0 folder to hrmis-2.1.0/hrmis
+
+ 7.  Copy the hrmanual folder from hrmis_hrhelp-2.1.0 folder to hrmis-2.1.0/hrmis
+
+ 8.  Copy the gif images from hrmis_hrhelpgif-2.1.0 folder to hrmis-2.1.0/hrmis/hrmanual
+ 
+ 9.  Database Setup. If you do not  have a database where you will be using the hrmis, create
+     a database for this software. For the sake of this installation, we'll use 'HRMISDB' as 
+     our hrmis database.  
+
+            cd hrmis-2.1.0/database/
+     
+     You will find the file 'HRMISDB.sql' in this directory. This file contains the commands
+     to create the tables in your new database.
+     
+            mysql HRMISDB -u <username> -p <password> < HRMISDB.sql
+     
+     
+     This command will set up the database for HRMIS.
+     
+ 10.  Now change the settings in the 'class/Connect.php' file for database connectivity.     
+     
+ 11.   Systems Settings
+
+      IMPORTANT: In the next steps, be careful to edit the files you have
+      ---------  copied in the HTTP server directories, not the original
+                 versions of the HRMIS  distribution.
+     Edit 'connect.php' to set up database connectivity. Change the database name, 
+     database user and database password to suit your system.
+    
+ 12.	Now HRMIS is ready to use. Point your web browser to the  HRMIS URL (http://your.host/hrmis/) and log-in as
+     
+      HR Module
+      	username : hr
+      	password : hr
+ 
+      Cashier Module
+        username : cash
+        password : cash
+
+      Ordinary Employee Module
+	username : user
+	password : user
+
+      Division Chief Module
+        username : chif
+	password : chif 	
+ 
+      Execom Module
+        username : dir
+        password : dir

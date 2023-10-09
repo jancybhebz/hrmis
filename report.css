@@ -1,0 +1,63 @@
+.title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+}
+.subtitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+}
+.titlebar {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+}
+.alterrow {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+}
+.list
+{
+	padding-left: 60pt;	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+}
+
+.sublist
+{
+	padding-left: 80pt;	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+}
+
+.listtitle
+{
+	padding-left: 50pt;	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	text-align: left;
+	font-weight: bold;	
+}
+.listamount
+{
+	padding-right: 10pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	text-align: right;	
+}
+.listamountbold
+{
+	padding-right: 10pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	text-align: right;
+	font-weight: bold;		
+}
+.simpletext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
